@@ -76,11 +76,15 @@ const cellSlise = createSlice({
       delete state.data[id];
     },
     insertCell(state: CellState, action: PayloadAction<InsertCellAction>) {
-      const { id, type } = action.payload;
+      const { id, type, content } = action.payload;
       const cell: Cell = {
         id: randomId(),
         type,
-        content: type === 'code' ? 'const a = 1' : 'Click to edit',
+        content: content
+          ? content
+          : type === 'code'
+          ? 'const a = 1'
+          : 'Click to edit',
       };
       state.data[cell.id] = cell;
 

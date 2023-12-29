@@ -23,6 +23,7 @@ export interface MoveCellAction {
 export interface InsertCellAction {
   id: string | null;
   type: CellTypes;
+  content?: string;
 }
 
 export interface CellState {
