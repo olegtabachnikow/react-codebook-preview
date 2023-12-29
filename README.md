@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+# React-Codebook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React-Codebook is an npm package that provides a versatile environment for writing and executing React.js code snippets. It includes a Markdown editor, a code editor, and serves the application via the command line interface (CLI). Users can specify options such as the filename and port number to tailor their development experience.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Link](https://react-codebook-preview.vercel.app/)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm install react-codebook
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Usage
+
+To start React-Codebook, use the following command in your terminal:
+
+```bash
+serve <filename> --port <number>
+```
+
+### Options
+
+- **filename**: Use the `<filename>` argument to specify the file to edit. (Default: "codebook.js")
+
+  ```bash
+  serve my-file.js
+  ```
+
+- **port**: Use the `--port <number>` flag to specify the port number to open the application. (Default: 4005)
+  ```bash
+  serve codebook.js --port 3000
+  ```
+
+## Features
+
+- **Markdown Editor**: Write and edit markdown content.
+- **Code Editor**: Compose React.js code snippets.
+- **CLI Launch**: Start the application using the command line interface.
+- **Customizable Options**: Tailor the experience with filename and port options.
+
+## Technologies Used
+
+- React
+- Express
+- Commander
+- React-Redux
+- ESBuild
